@@ -164,9 +164,9 @@ async function configureTelegram() {
   await telegram("setChatMenuButton", {
     menu_button: {
       type: "web_app",
-      text: "🍎 Predict",
-      web_app: { url: WEBAPP_URL },
-    },
+      text: "📝 S’INSCRIRE",
+      web_app: { url: REGISTER_URL }
+    }
   });
 
   await telegram("setMyCommands", {
