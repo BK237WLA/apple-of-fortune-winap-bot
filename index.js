@@ -3,6 +3,7 @@ const crypto = require("crypto");
 
 const BOT_TOKEN = process.env.BOT_TOKEN;
 const WEBAPP_URL = process.env.WEBAPP_URL || "https://merry-babka-0d08ea.netlify.app/";
+const REGISTER_URL = new URL("register.html", WEBAPP_URL).toString();
 const PORT = Number(process.env.PORT || 10000);
 const RENDER_EXTERNAL_URL = process.env.RENDER_EXTERNAL_URL;
 
@@ -66,6 +67,7 @@ Pour profiter pleinement de nos offres partenaires, bonus d’inscription et ava
 
 🔥 <b>RÈGLE À RETENIR :</b> inscris-toi via nos liens et renseigne <b>WINAP</b> lors de la création de ton compte pour bénéficier des avantages associés à notre offre.
 
+⚠️ Le code promo et le bot ne garantissent aucun gain. Les jeux d’argent comportent un risque de perte. 🔞`;
 
 async function telegram(method, payload = {}) {
   const response = await fetch(`${API}/${method}`, {
@@ -97,6 +99,12 @@ async function sendWelcome(chatId) {
             web_app: { url: WEBAPP_URL },
           },
         ],
+        [
+          {
+            text: "📝 S’INSCRIRE",
+            web_app: { url: REGISTER_URL },
+          },
+        ],
       ],
     },
   });
@@ -112,6 +120,7 @@ async function handleUpdate(update) {
     text === "/start" ||
     text === "/predict" ||
     text === "/app" ||
+    text === "/inscription" ||
     text.toLowerCase() === "predict"
   ) {
     await sendWelcome(msg.chat.id);
@@ -145,6 +154,7 @@ async function configureTelegram() {
     commands: [
       { command: "start", description: "Afficher l'accueil" },
       { command: "predict", description: "Ouvrir Apple of Fortune Predict" },
+      { command: "inscription", description: "Afficher les bookmakers partenaires" },
     ],
   });
 
