@@ -1,8 +1,8 @@
 {
-  "name": "apple-of-fortune-predict-render-bot",
-  "version": "2.0.0",
+  "name": "apple-of-fortune-predict-bot-guide",
+  "version": "3.0.0",
   "private": true,
-  "description": "Telegram webhook bot for Apple of Fortune Predict",
+  "description": "Telegram webhook bot with signup guide video",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"

@@ -1,0 +1,19 @@
+MISE À JOUR : GUIDE VIDÉO D’INSCRIPTION
+
+Nouveautés :
+- Bouton 🎥 GUIDE D’INSCRIPTION sous /start.
+- La vidéo est envoyée directement dans Telegram.
+- Bouton 📝 S’INSCRIRE MAINTENANT sous la vidéo.
+- Commande /guide.
+- Commande /inscription.
+- Le bouton permanent Telegram reste 📝 S’INSCRIRE.
+
+DÉPLOIEMENT :
+1. Décompresser ce ZIP.
+2. Remplacer les fichiers du repository GitHub par ceux du ZIP.
+3. Vérifier que guide-inscription.mp4 est bien présent à côté de index.js.
+4. Commit les changements.
+5. Render redéploie automatiquement.
+6. Tester /start puis 🎥 GUIDE D’INSCRIPTION.
+
+Ne place jamais BOT_TOKEN dans GitHub.
