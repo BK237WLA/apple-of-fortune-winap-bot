@@ -66,7 +66,6 @@ Pour profiter pleinement de nos offres partenaires, bonus d’inscription et ava
 
 🔥 <b>RÈGLE À RETENIR :</b> inscris-toi via nos liens et renseigne <b>WINAP</b> lors de la création de ton compte pour bénéficier des avantages associés à notre offre.
 
-⚠️ Le code promo et le bot ne garantissent aucun gain. Les jeux d’argent comportent un risque de perte. 🔞`;
 
 async function telegram(method, payload = {}) {
   const response = await fetch(`${API}/${method}`, {
