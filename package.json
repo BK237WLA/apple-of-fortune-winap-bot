@@ -1,0 +1,13 @@
+{
+  "name": "apple-of-fortune-predict-render-bot",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Telegram webhook bot for Apple of Fortune Predict",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

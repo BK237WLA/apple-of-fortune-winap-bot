@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: apple-of-fortune-winap-bot
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: WEBAPP_URL
+        value: https://merry-babka-0d08ea.netlify.app/
