@@ -67,7 +67,7 @@ Pour profiter pleinement de nos offres partenaires, bonus d’inscription et ava
 
 🔥 <b>RÈGLE À RETENIR :</b> inscris-toi via nos liens et renseigne <b>WINAP</b> lors de la création de ton compte pour bénéficier des avantages associés à notre offre.
 
-⚠️ Le code promo et le bot ne garantissent aucun gain. Les jeux d’argent comportent un risque de perte. 🔞`;
+`;
 
 async function telegram(method, payload = {}) {
   const response = await fetch(`${API}/${method}`, {
@@ -105,6 +105,26 @@ async function sendWelcome(chatId) {
             web_app: { url: REGISTER_URL },
           },
         ],
+        [
+          {
+            text: "🔵 1XBET",
+            url: "https://reffpa.com/L?tag=d_3357974m_97c_&site=3357974&ad=97",
+          },
+          {
+            text: "🟢 BETWINNER",
+            url: "https://bwredir.com/2sIB",
+          },
+        ],
+        [
+          {
+            text: "🎯 MEGAPARI",
+            url: "https://refpazitag.top/L?tag=d_3442168m_25437c_&site=3442168&ad=25437&r=registration",
+          },
+          {
+            text: "⚡ MELBET",
+            url: "https://refpa3665.com/L?tag=d_3357985m_45415c_&site=3357985&ad=45415",
+          },
+        ],
       ],
     },
   });
@@ -120,7 +140,6 @@ async function handleUpdate(update) {
     text === "/start" ||
     text === "/predict" ||
     text === "/app" ||
-    text === "/inscription" ||
     text.toLowerCase() === "predict"
   ) {
     await sendWelcome(msg.chat.id);
@@ -154,7 +173,6 @@ async function configureTelegram() {
     commands: [
       { command: "start", description: "Afficher l'accueil" },
       { command: "predict", description: "Ouvrir Apple of Fortune Predict" },
-      { command: "inscription", description: "Afficher les bookmakers partenaires" },
     ],
   });
 
